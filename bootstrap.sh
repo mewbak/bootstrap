@@ -1,7 +1,14 @@
 #!/bin/bash
 
+BOOTSTRAP_VERSION=1
 BOOTSTRAP_REPO=github.com/fyne-io/bootstrap
 BOOTSTRAP_DIR=$HOME/go/src/github.com/fyne-io/bootstrap
+
+CONFIG_DIR=$HOME/.config/fyne/bootstrap/
+LOG_FILE=$CONFIG_DIR/install.log
+VERSION_FILE=$CONFIG_DIR/version
+
+# TODO check if we are up to date with bootstrap
 
 DEP_LIST="git go efl sudo"
 DEP_FILE_LIST="git go ecore_evas_convert sudo"

@@ -19,6 +19,8 @@ if [[ -e "/etc/arch-release" ]] || [[ -e "/etc/manjaro-release" ]]; then
 elif [[ -e "/etc/debian_version" ]]; then
   INSTALL_COMMAND="sudo apt-get install"
   DEP_LIST="git golang efl sudo"
+elif [[ -e "/etc/fedora-release" ]]; then
+  INSTALL_COMMAND="sudo dnf install"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   INSTALL_COMMAND="brew install"
 fi

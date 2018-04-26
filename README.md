@@ -7,17 +7,8 @@ The bootstrap project is about getting users from zero to Fyne as fast as possib
 
 Some operating systems are fully automated but others need you to install some dependencies first - follow the right instructions below for your system.
 
-### Arch Linux
+## Arch Linux (Arch, Manjaro, Debian, Ubuntu or Fedora)
 
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
-
-### Debian / Ubuntu
-
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
-
-### Fedora
-
-    sudo dnf install git go efl
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
 ### Max OS X

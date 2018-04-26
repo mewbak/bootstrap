@@ -1,28 +1,24 @@
 # Getting Started
 
-The bootstrap project is about getting users from zero to Fyne as fast as possible. Until the process is
-[automated](https://github.com/fyne-io/fyne/issues/6) you will need to follow the steps below to get started.
+The bootstrap project is about getting users from zero to Fyne as fast as possible. The
+[automation](https://github.com/fyne-io/fyne/issues/6) is underway - this page will stay up to date with the latest instructions.
 
 ## Installing Dependencies
 
-The first of the two steps is to install the required dependencies, if you already have them installed then 
-you can skip to (Installing Fyne)[#installing-fyne].
+Some operating systems are fully automated but others need you to install some dependencies first - follow the right instructions below for your system.
 
-### Linux
+### Arch Linux
 
-For linux simply pick your system from this list and execute the appropriate package manager command
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
-#### Arch Linux
+### Debian / Ubuntu
 
-    sudo pacman -S git go efl
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
-#### Debian / Ubuntu
-
-    sudo apt-get install git go efl
-
-#### Fedora
+### Fedora
 
     sudo dnf install git go efl
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
 ### Max OS X
 
@@ -31,9 +27,9 @@ then just execute the following command and follow the instructions:
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-After that you can use the brew command to install the dependencies
+After that you can use the bootstrapper to complete the process
 
-    brew install go efl
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
 ### Windows
 
@@ -51,9 +47,7 @@ If you get errors later on about pkg-config not working you may need to fix pref
 in some /opt/windows_64/lib64/pkgconfig/ files (ecore.pc, ecore-evas.pc, eina.pc, eo.pc, evas.pc, evil.pc)
 - change /opt/windows_64 to c:\\msys64\\opt\\windows_64
 
-## Installing Fyne
-
-To get the basic install of Fyne is currently managed by installing the Go code directly, this is done using
+To get the basic install of Fyne running on Windows you still need to install the Go code directly, this is done using
 the built in go get functionality:
 
     go get github.com/fyne-io/fyne-app

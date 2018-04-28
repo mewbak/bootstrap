@@ -11,14 +11,14 @@ VERSION_FILE=$CONFIG_DIR/version
 # TODO check if we are up to date with bootstrap
 
 DEP_LIST="git go efl sudo"
-DEP_FILE_LIST="git go ecore_evas_convert sudo"
+DEP_FILE_LIST="git go ecore_evas_convert"
 
 INSTALL_COMMAND=""
 if [[ -e "/etc/arch-release" ]] || [[ -e "/etc/manjaro-release" ]]; then
   INSTALL_COMAND="sudo pacman --noconfirm -S"
 elif [[ -e "/etc/debian_version" ]]; then
-  INSTALL_COMMAND="sudo apt-get install"
-  DEP_LIST="git golang efl sudo"
+  INSTALL_COMMAND="sudo apt-get install -q -y"
+  DEP_LIST="git golang libecore-evas1"
 elif [[ -e "/etc/fedora-release" ]]; then
   INSTALL_COMMAND="sudo dnf install"
 elif [[ "$OSTYPE" == "darwin"* ]]; then

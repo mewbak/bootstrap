@@ -27,7 +27,7 @@ After that you can use the bootstrapper to complete the process
 Installing on Windows is a little more complicated, the recommended setup is using MSYS.
 If you do not already have the MSYS command line you can install it from http://www.msys2.org/ .
 The remaining dependencies are managed by Win-Builds which you can download from
-http://win-builds.org/doku.php/download\_and\_installation\_from\_windows - make sure to install it for MSYS when asked.
+http://win-builds.org/doku.php/download_and_installation_from_windows - make sure to install it for MSYS when asked.
 Allow Win-Builds to install all the recommended packages and then update your MSYS environment
 to include the following variables:
 

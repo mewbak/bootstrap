@@ -27,7 +27,7 @@ After that you can use the bootstrapper to complete the process
 Installing on Windows is a little more complicated, the recommended setup is using MSYS.
 If you do not already have the MSYS command line you can install it from http://www.msys2.org/ .
 The remaining dependencies are managed by Win-Builds which you can download from
-http://win-builds.org/doku.php/download_and_installation_from_windows - make sure to install it for MSYS when asked.
+http://win-builds.org/doku.php/download\_and\_installation\_from\_windows - make sure to install it for MSYS when asked.
 Allow Win-Builds to install all the recommended packages and then update your MSYS environment
 to include the following variables:
 
@@ -35,8 +35,8 @@ to include the following variables:
     export PKG_CONFIG_PATH=/opt/windows_64/lib64/pkgconfig/
 
 If you get errors later on about pkg-config not working you may need to fix prefix variable
-in some /opt/windows_64/lib64/pkgconfig/ files (ecore.pc, ecore-evas.pc, eina.pc, eo.pc, evas.pc, evil.pc)
-- change /opt/windows_64 to c:\\msys64\\opt\\windows_64
+in some /opt/windows\_64/lib64/pkgconfig/ files (ecore.pc, ecore-input.pc, ecore-evas.pc, eina.pc, eo.pc, evas.pc, evil.pc)
+- change /opt/windows\_64 to c:\\\\msys64\\\\opt\\\\windows\_64
 
 To get the basic install of Fyne running on Windows you still need to install the Go code directly, this is done using
 the built in go get functionality:

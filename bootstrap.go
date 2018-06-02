@@ -15,14 +15,12 @@ func goEnvPath() string {
 }
 
 func fyneExamplesPath() string {
-	return fmt.Sprintf("%s/src/github.com/fyne-io/examples", goEnvPath())
+	return fmt.Sprintf("%s/src/github.com/fyne-io/fyne/examples", goEnvPath())
 }
 
 func main() {
 	fmt.Println("[INFO ] Updating Fyne APIs")
 	goGetFyne("fyne")
-	goGetFyne("fyne-app")
-	goGetFyne("examples")
 
 	fmt.Println("[INFO ] Running Fyne examples")
 	cmd := exec.Command("go", "run", "main.go")

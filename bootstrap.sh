@@ -17,7 +17,7 @@ DEP_FILE_LIST="git go ecore_evas_convert"
 
 INSTALL_COMMAND=""
 if [[ -e "/etc/arch-release" ]] || [[ -e "/etc/manjaro-release" ]]; then
-  INSTALL_COMAND="sudo pacman --noconfirm -S"
+  INSTALL_COMMAND="sudo pacman --noconfirm -S"
 elif [[ -e "/etc/debian_version" ]]; then
   INSTALL_COMMAND="sudo apt-get install -q -y"
   DEP_LIST="git golang libecore-evas1"

@@ -27,6 +27,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   INSTALL_COMMAND="brew install"
 fi
 
+mkdir -p $CONFIG_DIR
+echo "Install started at `date`" > $LOG_FILE
+
 i=0
 read -ra DEP_FILE_ARRAY <<< "$DEP_FILE_LIST"
 for DEP in $DEP_LIST; do
@@ -45,9 +48,12 @@ if [[ ! -z $INSTALL_DEP ]]; then
     exit 1
   fi
 
-  $INSTALL_COMMAND $INSTALL_DEP > /dev/null
+  $INSTALL_COMMAND $INSTALL_DEP 2>&1 >> $LOG_FILE
   if [[ $? -ne 0 ]]; then
     echo "[FATAL] Unable to install dependencies"
+    echo "[LOG  ] Last 5 lines:"
+    tail -n 5 $LOG_FILE
+    echo "[LOG  ] Full log at $LOG_FILE"
     exit 2
   fi
 fi
@@ -56,7 +62,7 @@ echo "[INFO ] All dependencies installed, downloading bootstrapper"
 
 if [[ -d $BOOTSTRAP_DIR ]]; then
   cd $BOOTSTRAP_DIR
-  git pull > /dev/null
+  git pull 2>&1 >> $LOG_FILE
 else
   go get $BOOTSTRAP_REPO
 fi

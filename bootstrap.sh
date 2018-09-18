@@ -1,8 +1,10 @@
 #!/bin/bash
 
+GOPATH=`go env GOPATH`
+
 BOOTSTRAP_VERSION=1
 BOOTSTRAP_REPO=github.com/fyne-io/bootstrap
-BOOTSTRAP_DIR=$HOME/go/src/github.com/fyne-io/bootstrap
+BOOTSTRAP_DIR=$GOPATH/src/github.com/fyne-io/bootstrap
 
 CONFIG_DIR=$HOME/.config/fyne/bootstrap/
 LOG_FILE=$CONFIG_DIR/install.log

@@ -20,7 +20,7 @@ if [[ -e "/etc/arch-release" ]] || [[ -e "/etc/manjaro-release" ]]; then
   INSTALL_COMMAND="sudo pacman --noconfirm -S"
 elif [[ -e "/etc/debian_version" ]]; then
   INSTALL_COMMAND="sudo apt-get install -q -y"
-  DEP_LIST="git golang libecore-evas1"
+  DEP_LIST="git golang libefl-all-dev"
 elif [[ -e "/etc/fedora-release" ]]; then
   INSTALL_COMMAND="sudo dnf install"
 elif [[ "$OSTYPE" == "darwin"* ]]; then

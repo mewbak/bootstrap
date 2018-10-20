@@ -2,12 +2,15 @@
 
 The bootstrap project is about getting users from zero to Fyne as fast as possible. The
 [automation](https://github.com/fyne-io/fyne/issues/6) is underway - this page will stay up to date with the latest instructions.
+Some of Fyne's features depend on vector graphics which were only properly
+supported in EFL 1.19 and later. Systems that ship earlier EFL may not funciton
+as expected.
 
 ## Installing Dependencies
 
 Some operating systems are fully automated but others need you to install some dependencies first - follow the right instructions below for your system.
 
-## Arch Linux (Arch, Manjaro, Debian 10+, Ubuntu or Fedora)
+## Linux (Arch, Manjaro, Debian 10+, Ubuntu 18.10+ or Fedora 27+)
 
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
@@ -23,6 +26,9 @@ After that you can use the bootstrapper to complete the process
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
 ### Windows
+
+> Note that EFL windows packages are currently much older so you will not see
+> the vector graphics portions of Fyne applications.
 
 Installing on Windows is a little more complicated, the recommended setup is using MSYS.
 If you do not already have the MSYS command line you can install it from http://www.msys2.org/ .

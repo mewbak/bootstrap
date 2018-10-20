@@ -13,7 +13,7 @@ VERSION_FILE=$CONFIG_DIR/version
 # TODO check if we are up to date with bootstrap
 
 DEP_LIST="git go efl sudo"
-DEP_FILE_LIST="git go ecore_evas_convert"
+DEP_FILE_LIST="git go ecore_evas_convert sudo"
 
 INSTALL_COMMAND=""
 if [[ -e "/etc/arch-release" ]] || [[ -e "/etc/manjaro-release" ]]; then

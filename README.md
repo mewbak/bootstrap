@@ -10,7 +10,11 @@ as expected.
 
 Some operating systems are fully automated but others need you to install some dependencies first - follow the right instructions below for your system.
 
-## Linux (Arch, Manjaro, Debian 10+, Ubuntu 18.10+ or Fedora 27+)
+### Linux (Arch, Manjaro, Debian 10+, Ubuntu 18.10+ or Fedora 27+)
+
+On Linux the bootstrap script will install efl and it's development headers
+and dependencies - if you prefer to not use the script below you can install
+EFL manually if you have access to a 1.19 release or newer.
 
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
@@ -21,7 +25,7 @@ then just execute the following command and follow the instructions:
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-After that you can use the bootstrapper to complete the process
+After that you can use the bootstrapper to complete the processs. It will install the EFL dependency and run the Fyne examples
 
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
@@ -44,9 +48,14 @@ If you get errors later on about pkg-config not working you may need to fix pref
 in some /opt/windows\_64/lib64/pkgconfig/ files (ecore.pc, ecore-input.pc, ecore-evas.pc, eina.pc, eo.pc, evas.pc, evil.pc)
 - change /opt/windows\_64 to c:\\\\msys64\\\\opt\\\\windows\_64
 
-To get the basic install of Fyne running on Windows you still need to install the Go code directly, this is done using
-the built in go get functionality:
+## Run examples
 
-    go get github.com/fyne-io/fyne-app
+After installing the dependencies you can install the Fyne toolkit and run the
+examples using standard go commands. The Fyne repository includes an simple 
+demo which can help to test the installation.
+
+    go get github.com/fyne-io/fyne
+    cd $GOPATH\src\github.com\fyne-io\fyne
+    go run examples\main.go
 
 That's all there is to it - you're now ready to write your first Fyne app!

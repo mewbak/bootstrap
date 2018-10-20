@@ -11,7 +11,7 @@ Some operating systems are fully automated but others need you to install some d
 
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/fyne-io/bootstrap/master/bootstrap.sh)"
 
-### Max OS X
+### Mac OS X
 
 The recommended method for OS X installation is to use homebrew - if you do not already have it installed
 then just execute the following command and follow the instructions:

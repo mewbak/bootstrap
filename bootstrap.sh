@@ -26,6 +26,8 @@ elif [[ -e "/etc/fedora-release" ]]; then
   INSTALL_COMMAND="sudo dnf install"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   INSTALL_COMMAND="brew install"
+
+  export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
 fi
 
 mkdir -p $CONFIG_DIR

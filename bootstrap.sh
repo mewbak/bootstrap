@@ -63,12 +63,7 @@ fi
 
 echo "[INFO ] All dependencies installed, downloading bootstrapper"
 
-if [[ -d $BOOTSTRAP_DIR ]]; then
-  cd $BOOTSTRAP_DIR
-  git pull 2>&1 >> $LOG_FILE
-else
-  go get $BOOTSTRAP_REPO
-fi
+go get -u $BOOTSTRAP_REPO
 if [[ $? -ne 0 ]]; then
   echo "[FATAL] Unable to download bootstrap repository"
   exit 3

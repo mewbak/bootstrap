@@ -6,7 +6,7 @@ import "strings"
 
 func goGetFyne(repo string) {
 	url := fmt.Sprintf("github.com/fyne-io/%s", repo)
-	exec.Command("go", "get", url).Run()
+	exec.Command("go", "get", "-u", url).Run()
 }
 
 func goEnvPath() string {

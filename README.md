@@ -54,8 +54,9 @@ After installing the dependencies you can install the Fyne toolkit and run the
 examples using standard go commands. The Fyne repository includes an simple 
 demo which can help to test the installation.
 
-    go get github.com/fyne-io/fyne
-    cd $GOPATH\src\github.com\fyne-io\fyne
-    go run examples\main.go
+    go get -u github.com/fyne-io/fyne
+    go get -u github.com/fyne-io/examples
+    cd $GOPATH\src\github.com\fyne-io\examples
+    go run main.go
 
 That's all there is to it - you're now ready to write your first Fyne app!

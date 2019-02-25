@@ -4,9 +4,8 @@ import "fmt"
 import "os/exec"
 import "strings"
 
-func goGetFyne(repo string) {
-	url := fmt.Sprintf("github.com/fyne-io/%s", repo)
-	exec.Command("go", "get", "-u", url).Run()
+func goGetFyne() {
+	exec.Command("go", "get", "-u", "fyne.io/fyne").Run()
 }
 
 func goEnvPath() string {
@@ -20,7 +19,7 @@ func fyneExamplesPath() string {
 
 func main() {
 	fmt.Println("[INFO ] Updating Fyne APIs")
-	goGetFyne("fyne")
+	goGetFyne()
 
 	fmt.Println("[INFO ] Running Fyne examples")
 	cmd := exec.Command("go", "run", ".")
